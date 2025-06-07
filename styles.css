@@ -787,6 +787,28 @@ section {
     color: #9CA3AF;
 }
 
+.developer-credit {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #374151;
+}
+
+.developer-credit p {
+    color: #9CA3AF;
+    font-size: 0.9rem;
+}
+
+.developer-credit a {
+    color: var(--secondary-orange);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.developer-credit a:hover {
+    color: var(--light-purple);
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
