@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOOLI IVAN Campaign Banner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial Black', Arial, sans-serif;
+            background: linear-gradient(135deg, #6B46C1 0%, #F97316 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .banner-container {
+            width: 100%;
+            max-width: 1200px;
+            background: linear-gradient(135deg, #6B46C1 0%, #8B5CF6 50%, #F97316 100%);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 5px solid #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.1) 75%), 
+                        linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.1) 75%);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            pointer-events: none;
+        }
+
+        .banner-header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ant-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            background: white;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .ant-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .party-name {
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .banner-main {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+
+        .candidate-image {
+            text-align: center;
+        }
+
+        .candidate-image img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 5px solid #FFFFFF;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .candidate-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .candidate-name {
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner-text {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 3px solid #F97316;
+        }
+
+        .main-message {
+            color: #6B46C1;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1.4;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .position-title {
+            background: linear-gradient(135deg, #6B46C1, #F97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .banner-footer {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-message {
+            color: #F97316;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .decorative-elements {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.3), transparent);
+            border-radius: 50%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .decorative-elements:nth-child(2) {
+            top: auto;
+            bottom: 20px;
+            left: 20px;
+            background: radial-gradient(circle, rgba(107, 70, 193, 0.3), transparent);
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 768px) {
+            .banner-main {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .candidate-image img {
+                width: 150px;
+                height: 180px;
+            }
+            
+            .main-message {
+                font-size: 18px;
+            }
+            
+            .position-title {
+                font-size: 22px;
+            }
+            
+            .footer-message {
+                font-size: 18px;
+            }
+        }
+
+        .vote-symbol {
+            display: inline-block;
+            background: #F97316;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            margin: 0 5px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <div class="decorative-elements"></div>
+        <div class="decorative-elements"></div>
+        
+        <div class="banner-header">
+            <div class="ant-logo">
+                <img src="Alliance_for_National_Transformation.png" alt="ANT Logo">
+            </div>
+            <div class="party-name">ALLIANCE FOR NATIONAL TRANSFORMATION</div>
+        </div>
+
+        <div class="banner-main">
+            <div class="candidate-image">
+                <img src="MUGISHAMUNTU-removebg-preview.png" alt="MUGISHA MUNTU" onerror="this.style.display='none'">
+                <div class="candidate-name">MUGISHA MUNTU<br>Party Leader</div>
+            </div>
+
+            <div class="banner-text">
+                <div class="position-title">CHAIRMAN L.C.5 MANAFWA DISTRICT</div>
+                <div class="position-title">2026 - 2031</div>
+                <div class="main-message">
+                    Byebulekeeli, khutsowatsowana,<br>
+                    Byebulimi ni bubwayi atwela ni byekyiminyawo<br>
+                    khukatta babandu<br>
+                    lukoosi lwe babandu boosi<br>
+                    byebuwonesi bibikanisa atte nga bibikhoyessa
+                </div>
+                <div class="vote-symbol">LONDA</div>
+                <div class="vote-symbol">VOTE</div>
+            </div>
+
+            <div class="candidate-image">
+                <img src="MOOLIIVAN-removebg-preview (1).png" alt="MOOLI IVAN" onerror="this.style.display='none'">
+                <div class="candidate-name">MOOLI IVAN<br>LC5 Candidate</div>
+            </div>
+        </div>
+
+        <div class="banner-footer">
+            <div class="footer-message">
+                "MANAFWA YEFFE FEESI" NDUMANE KUUUU
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

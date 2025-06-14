@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MOOLI IVAN Static Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial Black', Arial, sans-serif;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .banner-container {
+      width: 900px;
+      height: 400px;
+      border: 3px solid #000;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .header-section {
+      background: #8E44AD;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 30px;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .candidate-name {
+      color: #fff;
+      font-size: 38px;
+      font-weight: 900;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      letter-spacing: 2px;
+    }
+
+    .slogan {
+      color: #F4F4F4;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .main-section {
+      display: flex;
+      flex: 1;
+      padding: 25px;
+      gap: 30px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .person-section {
+      width: 200px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .person-section img {
+      width: 180px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Small logo overlay on each person */
+    .logo-overlay {
+      position: absolute;
+      bottom: 10px;
+      width: 35px;
+      height: 35px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50%;
+      border: 2px solid #8E44AD;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    /* Position logos on opposite corners */
+    .left-person .logo-overlay {
+      right: 10px;
+    }
+
+    .right-person .logo-overlay {
+      left: 10px;
+    }
+
+    .center-content {
+      flex: 1;
+      text-align: center;
+      padding: 0 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      max-width: 400px;
+    }
+
+    .position-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2C2C2C;
+      line-height: 1.1;
+    }
+
+    .term-years {
+      font-size: 22px;
+      color: #8E44AD;
+      font-weight: bold;
+    }
+
+    .vote-call {
+      font-size: 16px;
+      color: #8E44AD;
+      font-weight: bold;
+    }
+
+    .main-message {
+      font-size: 13px;
+      color: #8E44AD;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .footer-section {
+      background: #8E44AD;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .footer-message {
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer-highlight {
+      color: #FFD700;
+      font-size: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-container">
+    <!-- Header -->
+    <div class="header-section">
+      <div class="header-content">
+        <div class="candidate-name">MOOLI IVAN</div>
+        <div class="slogan">"Change You Can Trust"</div>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main-section">
+      <!-- Left Person: MUGISHA MUNTU -->
+      <div class="person-section left-person">
+        <img src="MUGISHAMUNTU-removebg-preview.png" alt="MUGISHA MUNTU" onerror="this.style.display='none'">
+        <!-- ANT Logo overlay -->
+        <div class="logo-overlay">
+          <img src="Alliance_for_National_Transformation.png" alt="ANT Logo" onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <!-- Center Content -->
+      <div class="center-content">
+        <div class="position-title">CHAIRPERSON LCV MANAFWA DISTRICT</div>
+        <div class="term-years">2026 - 2031</div>
+        <div class="vote-call">Khulwe;</div>
+        <div class="main-message">
+          Bwebulekeeli, khutsowatsowana, bulimi ni bubwayi<br>
+          byatwela ni byekyiminyawo,<br>
+          Bikatta babandu,<br>
+          Lukoosi lwe babandu boosi,<br>
+          Byebukaggi bibikanisa, bibikhoyesa.
+        </div>
+      </div>
+
+      <!-- Right Person: MOOLI IVAN -->
+      <div class="person-section right-person">
+        <img src="MOOLIIVAN-removebg-preview (1).png" alt="MOOLI IVAN" onerror="this.style.display='none'">
+        <!-- ANT Logo overlay -->
+        <div class="logo-overlay">
+          <img src="ANTLOGO.jpg" alt="ANT Logo" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-section">
+      <div class="footer-message">
+        "<span class="footer-highlight">MANAFWA Yeffe Ffesi!</span> <span class="footer-highlight">Ndumane.!</span>"
+      </div>
+    </div>
+  </div>
+</body>
+</html>
